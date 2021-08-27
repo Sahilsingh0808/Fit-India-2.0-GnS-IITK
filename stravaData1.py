@@ -43,11 +43,11 @@ def table():
     distList = sorted(distList.items(), key=operator.itemgetter(0))
     nameList = sorted(nameList.items(), key=operator.itemgetter(0))
 
-    print((nameList))
+    # print((nameList))
     print()
     print((distList))
 
-    print(type(nameList))
+    # print(type(nameList))
 
     nameL = []
     distL = []
@@ -68,7 +68,7 @@ def table():
     nameL1 = df['Name'].to_list()
     distL1 = df['Distance'].to_list()
     roundsL1 = df['Rounds'].to_list()
-    print(nameL1)
+    # print(nameL1)
     dataDict1 = {'Name': nameL1, 'Distance': distL1, 'Rounds': roundsL1}
     df1 = pd.DataFrame(dataDict1)
     print(df1)
@@ -80,6 +80,6 @@ def table():
     htmlTable = htmlTable[:-17]
     # htmlTable.replace("</th>", "</td>")
     # htmlTable.replace("<th>", "<td>")
-    # print(htmlTable)
+    print(htmlTable)
 
     return render_template('index.html', data=htmlTable, heading="FIT INDIA 2.0 Cycling")
