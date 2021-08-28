@@ -74,7 +74,6 @@ def table():
     print(df1)
     df1.index += 1
 
-
     htmlTable = df1.to_html()
     htmlTable = htmlTable[200:]
     htmlTable = htmlTable[:-17]
