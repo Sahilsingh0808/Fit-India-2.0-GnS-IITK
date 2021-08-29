@@ -57,7 +57,7 @@ for i in range(len(nameList)):
 dataDict = {'Name': nameL, 'Distance': distL, 'Rounds': roundsL}
 
 df = pd.DataFrame(dataDict)
-print(df)
+
 df = df.sort_values(by=['Distance'], ascending=False)
 nameL1 = df['Name'].to_list()
 distL1 = df['Distance'].to_list()
@@ -65,7 +65,7 @@ roundsL1 = df['Rounds'].to_list()
 # print(nameL1)
 dataDict1 = {'Name': nameL1, 'Distance': distL1, 'Rounds': roundsL1}
 df1 = pd.DataFrame(dataDict1)
-print(df1)
+
 df1.index += 1
 
 htmlTable = df1.to_html()
@@ -75,3 +75,6 @@ htmlTable = htmlTable[:-17]
 # htmlTable.replace("<th>", "<td>")
 print(htmlTable)
 
+df1.to_csv('test/rideO.csv')
+
+print(df1)
